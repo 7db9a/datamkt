@@ -12,7 +12,7 @@ services:
     expose:
       - "8888"
     volumes:
-      - ../:/example
+      - ../:/datamkt
       - nodeos-data-volume:/opt/eosio/bin/data-dir
     cap_add:
       - IPC_LOCK
@@ -25,16 +25,16 @@ services:
     links:
       - nodeosd
     volumes:
-      - ../:/example
+      - ../:/datamkt
       - keosd-data-volume:/opt/eosio/bin/data-dir
     stop_grace_period: 10m
     env_file:
         - eos.env
-  example:
+  datamkt:
     image: rust-eos-dev:latest
     volumes:
-      - ../:/example
-      - example-cargo-dir:/usr/local/cargo
+      - ../:/datamkt
+      - datamkt-cargo-dir:/usr/local/cargo
     tty: true
 
 volumes:
@@ -42,4 +42,4 @@ volumes:
    external: true
  keosd-data-volume:
    external: true
- example-cargo-dir:
+ datamkt-cargo-dir:
