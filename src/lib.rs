@@ -11,7 +11,7 @@ fn createsub(
     require_auth(owner);
 
     let _self = current_receiver();
-    let substbl = subprofile::table(_self, _self);
+    let substbl = Subprofile::table(_self, _self);
 
     // Check if the owner already has a sub of the same name.
     let sub_count = substbl.iter().filter_map(|x| x.get().ok())
@@ -23,7 +23,7 @@ fn createsub(
     let sub_id = substbl.available_primary_key().expect("failed to get primary key");
 
 
-    let sub = subprofile {
+    let sub = Subprofile {
         sub_id,
         sub_name,
         owner,
@@ -32,7 +32,7 @@ fn createsub(
     substbl.emplace(owner, &sub).check("write");
 }
 
-eosio_cdt::abi!(createrepo);
+eosio_cdt::abi!(createsub);
 
 #[eosio::table("repoprofile")]
 struct Subprofile {
