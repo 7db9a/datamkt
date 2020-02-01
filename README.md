@@ -14,7 +14,7 @@ This environment uses EOSIO v1 and installs EOSIO software binaries instead of b
 ***Don't deploy production code using this environment. And don't hold actual tokens in a wallet made from here.***
 
 ```
-git clone https://github.com/7db9a/rust-eos-dev-env-starter datamkt
+git clone https://github.com/7db9a/datamkt
 cd datamkt/docker
 docker build -t rust-eos-dev:latest .
 docker volume create --name=nodeos-data-volume
