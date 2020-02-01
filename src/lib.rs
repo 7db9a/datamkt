@@ -45,8 +45,8 @@ struct Subprofile {
 #[eosio::table("sub")]
 struct Sub {
  #[eosio(primary_key)]
- file_id: u64,
- file_name: String,
+ item_id: u64,
+ item_name: String,
  ipfs_hash: String,
  #[eosio(secondary_key)]
  sub_id: u64,

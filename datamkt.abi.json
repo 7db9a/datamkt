@@ -46,11 +46,11 @@
             "base": "",
             "fields": [
                 {
-                    "name": "file_id",
+                    "name": "item_id",
                     "type": "uint64"
                 },
                 {
-                    "name": "file_Name",
+                    "name": "item_name",
                     "type": "string"
                 },
                 {
