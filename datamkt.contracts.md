@@ -4,6 +4,13 @@ Creates a subscription.
 <h1 class="contract">rmsub</h1>
 Removes a subscription.
 
+<h1 class="contract">additem</h1>
+Add item to subscription. Should be made private.
+If all the items in a table are deleted, then the file_id index is reset.
+
+<h1 class="contract">rmitem</h1>
+Remove item from a subscription. Should be made private.
+
 <h1 class="contract">memo</h1>
 Add sub memo.
 
@@ -47,4 +54,4 @@ Subscribe.
 Refund.
 
 <h1 class="contract">ratesub</h1>
-Rate sub.
+Rate sub. Should be made public.
