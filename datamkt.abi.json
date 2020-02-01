@@ -1,6 +1,10 @@
 {
     "version": "eosio::abi/1.1",
     "types": [
+        {
+            "new_type_name": "account_name",
+            "type": "name"
+        }
     ],
     "structs": [
         {
@@ -35,7 +39,35 @@
                     "type": "string"
                 }
             ]
+        },
+
+        {
+            "name": "sub",
+            "base": "",
+            "fields": [
+                {
+                    "name": "file_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "file_Name",
+                    "type": "string"
+                },
+                {
+                    "name": "ipfs_hash",
+                    "type": "string"
+                },
+                {
+                    "name": "sub_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "last_contributor",
+                    "type": "account_name"
+                }
+            ]
         }
+
     ],
     "actions": [
         {
