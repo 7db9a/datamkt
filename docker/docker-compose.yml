@@ -34,7 +34,7 @@ services:
     image: rust-eos-dev:latest
     volumes:
       - ../:/project
-      - datamkt-cargo-dir:/usr/local/cargo
+      - datamkt-cargo-data-volume:/usr/local/cargo
     tty: true
 
 volumes:
@@ -42,4 +42,5 @@ volumes:
    external: true
  datamkt-keosd-data-volume:
    external: true
- datamkt-cargo-dir:
+ datamkt-cargo-data-volume:
+   external: true
