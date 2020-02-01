@@ -86,7 +86,7 @@ install_eoslime() {
     docker exec \
     -it \
     docker_nodeosd_1 \
-    npm install --prefix /example/testing -y --save-dev --verbose
+    npm install --prefix /project/testing -y --save-dev --verbose
 }
 
 run_test() {

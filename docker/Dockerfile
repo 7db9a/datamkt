@@ -31,7 +31,7 @@ RUN cd wabt && mkdir build && cd build && cmake .. && cmake --build .
 
 # Install eoslime.
 RUN apt install -y nodejs npm
-WORKDIR /example/testing
+WORKDIR /project/testing
 RUN npm install -y --save-dev --verbose
 
-WORKDIR /example
+WORKDIR /project
