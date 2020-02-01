@@ -5,7 +5,7 @@ Creates a subscription.
 Removes a subscription.
 
 <h1 class="contract">additem</h1>
-Add item to subscription. Should be made private.
+Add item to a subscription. Should be made private.
 If all the items in a table are deleted, then the file_id index is reset.
 
 <h1 class="contract">rmitem</h1>
