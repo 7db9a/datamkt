@@ -1,12 +1,21 @@
-## My Rust EOS Dev Environment (Naive)
+# Datamkt
+
+Coming soon...
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Development Environment](#development-environment)
+
+## Development Environment
 
 This environment uses EOSIO v1 and installs EOSIO software binaries instead of building from source (see Dockerfile). It sets up [eosio-rust](https://github.com/sagan-software/eosio-rust) for contract development and [eoslime](https://github.com/LimeChain/eoslime) (nodejs) for tests. Nodeos and keos are launched in their own containers.
 
 ***Don't deploy production code using this environment. And don't hold actual tokens in a wallet made from here.***
 
 ```
-git clone https://github.com/7db9a/rust-eos-dev-env-starter your-eos-project
-cd your-eos-project/docker
+git clone https://github.com/7db9a/rust-eos-dev-env-starter datamkt
+cd datamkt/docker
 docker build -t rust-eos-dev:latest .
 docker volume create --name=nodeos-data-volume
 docker volume create --name=keosd-data-volume
