@@ -34,7 +34,7 @@ fn createsub(
 
 eosio_cdt::abi!(createsub);
 
-#[eosio::table("repoprofile")]
+#[eosio::table("subprofile")]
 struct Subprofile {
  #[eosio(primary_key)]
  sub_id: u64,
