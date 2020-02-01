@@ -1,8 +1,8 @@
 <h1 class="contract">createsub</h1>
-Create sub.
+Creates a subscription.
 
 <h1 class="contract">rmsub</h1>
-Remove sub.
+Removes a subscription.
 
 <h1 class="contract">memo</h1>
 Add sub memo.
