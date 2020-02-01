@@ -17,8 +17,8 @@ This environment uses EOSIO v1 and installs EOSIO software binaries instead of b
 git clone https://github.com/7db9a/datamkt
 cd datamkt/docker
 docker build -t rust-eos-dev:latest .
-docker volume create --name=nodeos-data-volume
-docker volume create --name=keosd-data-volume
+docker volume create --name=datamkt-nodeos-data-volume
+docker volume create --name=datamkt-keosd-data-volume
 docker-compose up
 ```
 
