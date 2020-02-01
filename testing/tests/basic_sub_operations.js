@@ -1,8 +1,8 @@
 const assert = require('assert');
 const eoslime = require('./../eoslime').init();
 
-const TOKEN_WASM_PATH = '../../example/datamkt_gc_opt.wasm';
-const TOKEN_ABI_PATH =  '../../example/datamkt.abi.json';
+const TOKEN_WASM_PATH = '../../project/datamkt_gc_opt.wasm';
+const TOKEN_ABI_PATH =  '../../project/datamkt.abi.json';
 
 describe('Basic sub operations', function () {
 
