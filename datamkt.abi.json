@@ -1,6 +1,65 @@
 {
     "version": "eosio::abi/1.1",
-    "types": []
+    "types": [
+    ],
+    "structs": [
+        {
+            "name": "subprofile",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sub_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sub_name",
+                    "type": "string"
+                },
+                {
+                    "name": "owner",
+                    "type": "account_name"
+                }
+            ]
+        },
+        {
+
+            "name": "createsub",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "account_name"
+                },
+                {
+                    "name": "sub_name",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "createsub",
+            "type": "createsub",
+            "ricardian_contract": "Creates a subscription."
+        }
+    ],
+    "tables": [
+        {
+            "name": "subprofile",
+            "type": "subprofile",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "sub",
+            "type": "sub",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
     "ricardian_clauses": [],
     "variants": [],
     "abi_extensions": []
