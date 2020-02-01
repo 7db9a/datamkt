@@ -3,22 +3,22 @@
 cargo-build() {
     docker exec \
     -it \
-    docker_example_1 \
+    docker_datamkt_1 \
     /root/.cargo/bin/cargo build --release --target=wasm32-unknown-unknown
 }
 
 wasm-gc() {
     docker exec \
     -it \
-    docker_example_1 \
-    /root/.cargo/bin/wasm-gc target/wasm32-unknown-unknown/release/example.wasm example_gc.wasm
+    docker_datamkt_1 \
+    /root/.cargo/bin/wasm-gc target/wasm32-unknown-unknown/release/datamkt.wasm datamkt_gc.wasm
 }
 
 wasm-opt() {
     docker exec \
     -it \
-    docker_example_1 \
-    wasm-opt example_gc.wasm --output example_gc_opt.wasm -Oz
+    docker_datamkt_1 \
+    wasm-opt datamkt_gc.wasm --output datamkt_gc_opt.wasm -Oz
 }
 
 build() {
@@ -35,7 +35,7 @@ wallet-create() {
     --url http://nodeosd:8888 \
     --wallet-url http://127.0.0.1:8900 \
     wallet create \
-    -n user1 \
+    -n datamkt1 \
     --to-console
 }
 
@@ -47,7 +47,7 @@ wallet-unlock() {
     --url http://nodeosd:8888 \
     --wallet-url http://127.0.0.1:8900 \
     wallet unlock \
-    -n user1 \
+    -n datamkt1 \
     --password ${WALLET_PASSWORD}'
 }
 
@@ -57,7 +57,7 @@ docker exec -it docker_keosd_1 \
     --url http://nodeosd:8888 \
     --wallet-url http://127.0.0.1:8900 \
     wallet import \
-    -n user1 \
+    -n datamkt1 \
     --private-key ${EOS_PRIVKEY}'
 }
 
@@ -68,7 +68,7 @@ account-create() {
     bash -c 'cleos \
     --url http://nodeosd:8888 \
     --wallet-url http://127.0.0.1:8900 \
-    create account eosio user1 ${EOS_PUBKEY}'
+    create account eosio datamkt1 ${EOS_PUBKEY}'
 }
 
 set-abi-code() {
@@ -78,15 +78,15 @@ set-abi-code() {
     cleos \
     --url http://nodeosd:8888 \
     --wallet-url http://127.0.0.1:8900 \
-    set abi user1 example.abi.json
-    set code user1 example_gc_opt.wasm
+    set abi datamkt1 datamkt.abi.json
+    set code datamkt1 datamkt_gc_opt.wasm
 }
 
 install_eoslime() {
     docker exec \
     -it \
     docker_nodeosd_1 \
-    npm install --prefix /example/testing -y --save-dev --verbose
+    npm install --prefix /datamkt/testing -y --save-dev --verbose
 }
 
 run_test() {
