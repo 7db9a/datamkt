@@ -93,7 +93,7 @@ run_test() {
     docker exec \
     -it \
     docker_nodeosd_1 \
-    npm test --prefix testing tests/basic_repo_operations.js
+    npm test --prefix testing tests/basic_sub_operations.js
 }
 
 run() {
