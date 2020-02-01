@@ -19,6 +19,7 @@ cd datamkt/docker
 docker build -t rust-eos-dev:latest .
 docker volume create --name=datamkt-nodeos-data-volume
 docker volume create --name=datamkt-keosd-data-volume
+docker volume create --name=datamkt-cargo-data-volume
 docker-compose up
 ```
 
